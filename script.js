@@ -22,3 +22,25 @@ const closeModal = () => {
 btnCloseModal.addEventListener('click', closeModal);
 
 overlay.addEventListener('click', closeModal);
+
+//escape keey for closing the modal keyboard event
+document.addEventListener('keydown', e => {
+  console.log(e.key);
+  if (e.key === 'Escape') {
+    if (!modal.classList.contains('hidden')) {
+      closeModal();
+    }
+  }
+});
+
+// ...
+
+// escape key for closing the modal keyboard event
+// document.addEventListener('keydown', e => {
+//   console.log(e.key);
+//   if (e.key === 'Escape') {
+//     if (!modal.classList.contains('hidden')) {
+//       closeModal();
+//     }
+//   }
+// });
